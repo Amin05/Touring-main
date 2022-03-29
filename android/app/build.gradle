@@ -23,34 +23,34 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
     signingConfigs {
-        release {
-            storeFile file('D:\\Projects\\Hardi\\touring2\\touring.jks')
-            storePassword 'touringtouring'
-            keyAlias 'touring'
-            keyPassword 'touringtouring'
-        }
+//        release {
+//            storeFile file('D:\\Projects\\Hardi\\touring2\\touring.jks')
+//            storePassword 'touringtouring'
+//            keyAlias 'touring'
+//            keyPassword 'touringtouring'
+//        }
     }
 
     defaultConfig {
         multiDexEnabled true
         applicationId "com.script.touring"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName '1.0'
-        signingConfig signingConfigs.release
+//        signingConfig signingConfigs.release
     }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
             shrinkResources false
             minifyEnabled false
         }

@@ -345,19 +345,21 @@ class HomePageState extends State<HomePage> {
               SizedBox(
                 width: 5.0,
               ),
-              Text(
-                text,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
-                  color: textColor,
-                  shadows: [
-                    Shadow(
-                      color: shadowColor,
-                      blurRadius: 4.0,
-                      offset: Offset(2.0, 2.0),
-                    ),
-                  ],
+              Expanded(
+                child: Text(
+                  text,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
+                    color: textColor,
+                    shadows: [
+                      Shadow(
+                        color: shadowColor,
+                        blurRadius: 4.0,
+                        offset: Offset(2.0, 2.0),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

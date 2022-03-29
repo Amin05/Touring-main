@@ -156,8 +156,11 @@ class LiveGroupPageState extends State<LiveGroupPage> {
 
   void _listenPosition() {
     final positionStream = _geolocatorPlatform.getPositionStream(
-      timeInterval: kTimeInterval,
-      desiredAccuracy: LocationAccuracy.high,
+      locationSettings: AndroidSettings(
+        intervalDuration: Duration(seconds: kTimeInterval) ,
+        accuracy: LocationAccuracy.high,
+
+      ),
     );
     _positionStreamSubscription = positionStream.handleError((error) {
       _positionStreamSubscription.cancel();
